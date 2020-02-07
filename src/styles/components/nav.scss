@@ -1,0 +1,13 @@
+.nav {
+  &__list {
+    margin: 0;
+  }
+
+  &__item {
+    display: inline;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

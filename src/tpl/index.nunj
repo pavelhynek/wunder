@@ -1,0 +1,7 @@
+{% extends "layouts/default.nunj" %}
+
+{% set title = "Gulpie" %}
+
+{% block content %}
+  <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia sit fugit dolor consequatur delectus eveniet, vitae architecto labore quasi nam, placeat ullam ad reiciendis autem! Consectetur delectus cupiditate repellat fuga.</div>
+{% endblock %}
