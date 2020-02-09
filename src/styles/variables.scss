@@ -10,6 +10,7 @@ $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 $black:   #666;
+$white:   #fff;
 
 $theme-colors: (
   primary: $black,
@@ -20,8 +21,10 @@ $theme-colors: (
   danger: $red
 );
 
+$h1-font-size: 48px;
+$h2-font-size: 34px;
+$headings-color: #fff;
+
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
-
-$link-hover-color: $blue;

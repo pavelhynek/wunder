@@ -1,12 +1,29 @@
-@import 'variables';
-@import 'bootstrap/bootstrap';
+@import "variables";
+@import "bootstrap/bootstrap";
 
 body {
-  font-family: 'Roboto', $font-family-base;
+  font-family: "Roboto", $font-family-base;
 
   &.wf-active {
     font-family: $font-family-base;
   }
 }
 
-@import 'components/*';
+h2 {
+  font-size: 34px;
+  font-weight: 400;
+  color: #399eef;
+  text-align: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #0075be;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+@import "components/*";
