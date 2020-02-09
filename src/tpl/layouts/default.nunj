@@ -8,79 +8,88 @@
 {% set firstVisit = false %}
 <!DOCTYPE html>
 <html lang="cs">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ _cssPath }}/main{% if not _dev %}.min{% endif %}.css">
 
     {% if firstVisit %}
-        <script>
-            {# cookie expired after 24 hours #}
-            document.cookie ='cache=1; expires='+(new Date(new Date().getTime() + 86400000)).toGMTString()+'; path=/';
+      <script>
+        {
+          # cookie expired after 24 hours #
+        }
+        document.cookie = 'cache=1; expires=' + (
+        new Date(new Date().getTime() + 86400000)).toGMTString() + '; path=/';
 
-            {#-- Google webfont --#}
-            WebFontConfig = {
-                google: {
-                    families: ['Roboto:400,700i']
-                }
-            };
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async defer></script>
+        {
+          #-- Google webfont-- #
+        }
+        WebFontConfig = {
+          google: {
+            families: ['Roboto:400,700i']
+          }
+        };
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async defer></script>
     {% else %}
-        {#-- Google webfont --#}
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700i" rel="stylesheet">
+      {#-- Google webfont --#}
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700i" rel="stylesheet">
     {% endif %}
-</head>
-<body>
+  </head>
+  <body>
     {# Main content of the page #}
     <main>
-        <header class="header container-fluid">
-          <div class="header__inner container d-flex align-items-center justify-content-between pv-4">
-            <div class="header__logo">
-              <img src="/gfx/images/logo.png" alt="logo">
-            </div>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a class="nav__link" href="#">HOME</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">STYLE DEMO</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">FULL WIDTH</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">DROPDOWN</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">PORTFOLIO</a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#">GALLERY</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-          <img src="" alt="">
+      <header class="header container-fluid">
 
-          </div>
-        </header>
-        <div class="container">
-            {% block content %}{% endblock %}
+        <nav class="navbar navbar-expand-lg navbar-light container">
+          <a class="navbar-brand" href="#"><img src="/gfx/images/logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse navbar__nav" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">STYLE DEMO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FULL WIDTH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DROPDOWN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PORTFOLIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GALLERY</a>
+              </li>
+            </div>
+          </nav>
+
+          <img class="img-fluid" src="/gfx/images/header.png" alt="header">
+
         </div>
+      </header>
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
     </main>
 
     {# Scripts #}
-    <script>
-        var config = {};
-    </script>
     {% if _dev %}
-        <script src="{{ _jsPath }}/app.js" async></script>
+      <script src="{{ _jsPath }}/app.js" async></script>
     {% else %}
-        <script src="{{ _jsPath }}/app.min.js" async></script>
+      <script src="{{ _jsPath }}/app.min.js" async></script>
     {% endif %}
-</body>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
 </html>

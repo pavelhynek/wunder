@@ -1,13 +1,7 @@
-.nav {
-  &__list {
-    margin: 0;
-  }
+.navbar {
+  justify-content: space-around;
 
-  &__item {
-    display: inline;
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+  &__nav {
+    justify-content: flex-end;
   }
 }
