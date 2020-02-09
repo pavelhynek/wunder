@@ -34,7 +34,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async defer></script>
     {% else %}
       {#-- Google webfont --#}
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500,700i" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700i" rel="stylesheet">
     {% endif %}
   </head>
   <body>
@@ -68,16 +68,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">GALLERY</a>
               </li>
-            </div>
-          </nav>
+            </ul>
+          </div>
+        </nav>
 
-          <div class="row">
-            <div class="col text-center header__main">
-              <h1>Wunderman Web Academy</h1>
-              <div class="header__subtitle">Test task</div>
-            </div>
+        <div class="row">
+          <div class="col text-center header__main">
+            <h1>Wunderman Web Academy</h1>
+            <div class="header__subtitle">Test task</div>
           </div>
         </div>
+
       </header>
       {% block content %}{% endblock %}
     </main>
