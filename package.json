@@ -75,7 +75,7 @@
     "mokker": "^0.3.2",
     "nunjucks": "^3.0.1",
     "postcss-flexbugs-fixes": "^3.2.0",
-    "postcss-less": "2.0.0",
+    "postcss-less": "4.0.1",
     "postcss-scss": "2.0.0",
     "postcss-sorting": "4.0.0",
     "pre-push": "^0.1.1",
